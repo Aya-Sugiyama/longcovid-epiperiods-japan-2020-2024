@@ -98,7 +98,7 @@ Individual-level data cannot be shared, as participants did not consent to exter
 
 Please cite this repository as follows:  
 
-**DOI:** [Zenodo Concept DOI]  
+**DOI:** [[![DOI](https://zenodo.org/badge/1069976469.svg)](https://doi.org/10.5281/zenodo.17375257)]  
 **URL:** [https://github.com/USER/REPO]  
 
 (Alternatively, use the **“Cite this repository”** button on GitHub if a *CITATION.cff* file is present.)
