@@ -1,0 +1,9 @@
+
+Survival(
+	Y( :Name( "Left endpoint (months)" ), :Name( "Right endpoint (months)" ) ),
+	Grouping( :Epidemic periods ),
+	Freq( :N ),
+	Failure Plot( 0 ),
+	Midstep Quantile Points( 0 ),
+	By( :symptoms )
+);

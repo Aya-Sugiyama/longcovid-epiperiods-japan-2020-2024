@@ -1,0 +1,313 @@
+﻿
+Survival(
+	SendToByGroup(
+		{:Adults_Children == "Adults", :Name( " postCOVID19symptoms_severity" ) ==
+		" interfere with daily life"}
+	),
+	Y( :Name( "Left endpoint (months)" ), :Name( "Right endpoint (months)" ) ),
+	Grouping( :Epidemic periods ),
+	Freq( :N ),
+	Failure Plot( 0 ),
+	Midstep Quantile Points( 0 ),
+	By( :Adults_Children, :Name( " postCOVID19symptoms_severity" ) ),
+	SendToByGroup(
+		{:Adults_Children == "Adults", :Name( " postCOVID19symptoms_severity" ) ==
+		" interfere with daily life"},
+		SendToReport(
+			Dispatch(
+				{},
+				"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity= interfere with daily life",
+				OutlineBox,
+				{Close( 1 )}
+			),
+			Dispatch(
+				{
+				"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity= interfere with daily life"
+				},
+				"Alpha period",
+				OutlineBox,
+				{Close( 0 )}
+			),
+			Dispatch(
+				{
+				"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity= interfere with daily life"
+				},
+				"Delta period",
+				OutlineBox,
+				{Close( 0 )}
+			),
+			Dispatch(
+				{
+				"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity= interfere with daily life"
+				},
+				"Omicron period2022",
+				OutlineBox,
+				{Close( 0 )}
+			),
+			Dispatch(
+				{
+				"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity= interfere with daily life"
+				},
+				"Omicron period2024",
+				OutlineBox,
+				{Close( 0 )}
+			),
+			Dispatch(
+				{
+				"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity= interfere with daily life"
+				},
+				"Wildtype period",
+				OutlineBox,
+				{Close( 0 )}
+			),
+			Dispatch(
+				{
+				"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity= interfere with daily life"
+				},
+				"Combined",
+				OutlineBox,
+				{Close( 0 )}
+			)
+		)
+	),
+	SendToByGroup(
+		{:Adults_Children == "Adults", :Name( " postCOVID19symptoms_severity" ) ==
+		"any level"},
+		SendToReport(
+			Dispatch(
+				{},
+				"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity=any level",
+				OutlineBox,
+				{Close( 1 )}
+			)
+		)
+	),
+	SendToByGroup(
+		{:Adults_Children == "Children", :Name( " postCOVID19symptoms_severity" )
+		 == " interfere with daily life"},
+		SendToReport(
+			Dispatch(
+				{},
+				"Kaplan-Meier法によるあてはめ Adults_Children=Children,  postCOVID19symptoms_severity= interfere with daily life",
+				OutlineBox,
+				{Close( 1 )}
+			)
+		)
+	),
+	SendToByGroup(
+		{:Adults_Children == "Children", :Name( " postCOVID19symptoms_severity" )
+		 == "any level"},
+		SendToReport(
+			Dispatch(
+				{},
+				"Kaplan-Meier法によるあてはめ Adults_Children=Children,  postCOVID19symptoms_severity=any level",
+				OutlineBox,
+				{Close( 1 )}
+			)
+		)
+	)
+);
+
+New Window( "S_Table1_turnbull_long - 生存時間分析",
+	V List Box(
+		Survival(
+			Y(
+				:Name( "Left endpoint (months)" ),
+				:Name( "Right endpoint (months)" )
+			),
+			Grouping( :Epidemic periods ),
+			Freq( :N ),
+			Failure Plot( 0 ),
+			Midstep Quantile Points( 0 ),
+			Where(
+				:Adults_Children == "Adults" & :Name(
+					" postCOVID19symptoms_severity"
+				) == " interfere with daily life"
+			),
+			SendToReport(
+				Dispatch(
+					{},
+					"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity= interfere with daily life",
+					OutlineBox,
+					{Close( 1 )}
+				),
+				Dispatch( {}, "Alpha period", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Delta period", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Omicron period2022", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Omicron period2024", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Wildtype period", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Combined", OutlineBox, {Close( 0 )} )
+			)
+		),
+		Survival(
+			Y(
+				:Name( "Left endpoint (months)" ),
+				:Name( "Right endpoint (months)" )
+			),
+			Grouping( :Epidemic periods ),
+			Freq( :N ),
+			Failure Plot( 0 ),
+			Midstep Quantile Points( 0 ),
+			Where(
+				:Adults_Children == "Adults" & :Name(
+					" postCOVID19symptoms_severity"
+				) == "any level"
+			),
+			SendToReport(
+				Dispatch(
+					{},
+					"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity=any level",
+					OutlineBox,
+					{Close( 1 )}
+				)
+			)
+		),
+		Survival(
+			Y(
+				:Name( "Left endpoint (months)" ),
+				:Name( "Right endpoint (months)" )
+			),
+			Grouping( :Epidemic periods ),
+			Freq( :N ),
+			Failure Plot( 0 ),
+			Midstep Quantile Points( 0 ),
+			Where(
+				:Adults_Children == "Children" &
+				:Name( " postCOVID19symptoms_severity" ) ==
+				" interfere with daily life"
+			),
+			SendToReport(
+				Dispatch(
+					{},
+					"Kaplan-Meier法によるあてはめ Adults_Children=Children,  postCOVID19symptoms_severity= interfere with daily life",
+					OutlineBox,
+					{Close( 1 )}
+				)
+			)
+		),
+		Survival(
+			Y(
+				:Name( "Left endpoint (months)" ),
+				:Name( "Right endpoint (months)" )
+			),
+			Grouping( :Epidemic periods ),
+			Freq( :N ),
+			Failure Plot( 0 ),
+			Midstep Quantile Points( 0 ),
+			Where(
+				:Adults_Children == "Children" &
+				:Name( " postCOVID19symptoms_severity" ) == "any level"
+			),
+			SendToReport(
+				Dispatch(
+					{},
+					"Kaplan-Meier法によるあてはめ Adults_Children=Children,  postCOVID19symptoms_severity=any level",
+					OutlineBox,
+					{Close( 1 )}
+				)
+			)
+		)
+	)
+);
+
+New Window( "S_Table1_turnbull_long - 生存時間分析",
+	V List Box(
+		Survival(
+			Y(
+				:Name( "Left endpoint (months)" ),
+				:Name( "Right endpoint (months)" )
+			),
+			Grouping( :Epidemic periods ),
+			Freq( :N ),
+			Failure Plot( 0 ),
+			Midstep Quantile Points( 0 ),
+			Where(
+				:Adults_Children == "Adults" & :Name(
+					" postCOVID19symptoms_severity"
+				) == " interfere with daily life"
+			),
+			SendToReport(
+				Dispatch(
+					{},
+					"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity= interfere with daily life",
+					OutlineBox,
+					{Close( 1 )}
+				),
+				Dispatch( {}, "Alpha period", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Delta period", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Omicron period2022", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Omicron period2024", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Wildtype period", OutlineBox, {Close( 0 )} ),
+				Dispatch( {}, "Combined", OutlineBox, {Close( 0 )} )
+			)
+		),
+		Survival(
+			Y(
+				:Name( "Left endpoint (months)" ),
+				:Name( "Right endpoint (months)" )
+			),
+			Grouping( :Epidemic periods ),
+			Freq( :N ),
+			Failure Plot( 0 ),
+			Midstep Quantile Points( 0 ),
+			Where(
+				:Adults_Children == "Adults" & :Name(
+					" postCOVID19symptoms_severity"
+				) == "any level"
+			),
+			SendToReport(
+				Dispatch(
+					{},
+					"Kaplan-Meier法によるあてはめ Adults_Children=Adults,  postCOVID19symptoms_severity=any level",
+					OutlineBox,
+					{Close( 1 )}
+				)
+			)
+		),
+		Survival(
+			Y(
+				:Name( "Left endpoint (months)" ),
+				:Name( "Right endpoint (months)" )
+			),
+			Grouping( :Epidemic periods ),
+			Freq( :N ),
+			Failure Plot( 0 ),
+			Midstep Quantile Points( 0 ),
+			Where(
+				:Adults_Children == "Children" &
+				:Name( " postCOVID19symptoms_severity" ) ==
+				" interfere with daily life"
+			),
+			SendToReport(
+				Dispatch(
+					{},
+					"Kaplan-Meier法によるあてはめ Adults_Children=Children,  postCOVID19symptoms_severity= interfere with daily life",
+					OutlineBox,
+					{Close( 1 )}
+				)
+			)
+		),
+		Survival(
+			Y(
+				:Name( "Left endpoint (months)" ),
+				:Name( "Right endpoint (months)" )
+			),
+			Grouping( :Epidemic periods ),
+			Freq( :N ),
+			Failure Plot( 0 ),
+			Midstep Quantile Points( 0 ),
+			Where(
+				:Adults_Children == "Children" &
+				:Name( " postCOVID19symptoms_severity" ) == "any level"
+			),
+			SendToReport(
+				Dispatch(
+					{},
+					"Kaplan-Meier法によるあてはめ Adults_Children=Children,  postCOVID19symptoms_severity=any level",
+					OutlineBox,
+					{Close( 1 )}
+				)
+			)
+		)
+	)
+);
