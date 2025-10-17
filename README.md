@@ -18,7 +18,7 @@ Turnbull interval-censored survival curves were estimated in **JMP**, and subseq
 
 **Steps:**
 - Input: `data/aggregated/S_Table1_turnbull_long.csv`  
-- Run: `jmp/analysis.jrn` (JMP Journal for Turnbull analysis)  
+- Run: `jmp/turnbull_survival.jsl` (JMP Journal for Turnbull analysis)  
 - Output files generated from JMP:  
   - `jmp_turnbull_steps_adult_any.csv`  
   - `jmp_turnbull_steps_child_any.csv`  
@@ -61,10 +61,10 @@ Individual-level data cannot be shared due to ethical restrictions, but the full
 
 **Steps:**
 - Input: `data/aggregated/13symptoms_turnbull_long.csv`  
-- Run in JMP: `jmp/13symptoms_turnbull_symptom_survival.jsl`  
+- Run in JMP: `jmp/13symptoms_turnbull_survival.jsl`  
   → Output: `jmp_turnbull_steps_13symptoms.csv`  
 - Then run in R: `r/03_symptom_prevalence_3m_12m.R`  
-  → Output: `figures_underlying_data/figure3_points.csv`  
+  → Output: `figure3_points.csv`  
 
 `figure3_points.csv` contains the data required to reproduce **Figure 3**.
 
