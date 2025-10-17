@@ -1,0 +1,60 @@
+﻿"S Table 1. Distribution of intervals for symptom resolution among participants with post-COVID-19 symptoms, used in Turnbull interval-censored survival analysis",,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,"Adults (N=1,524)",,,,,,"Children(N=1,165)",,,,
+,,,Epidemic periods,,,,,,Epidemic periods,,,,
+,,,"Wild-type period
+(N=379)","Alpha period
+(N=309)","Delta period
+(N=245)","Omicron period-2022
+(N=454)","Omicron period-2024
+(N=137)",,"Wild-type period
+(N=27)","Alpha period
+(N=11)","Delta period
+(N=73)","Omicron period-2022
+(N=923)","Omicron period-2024
+(N=131)"
+,Left endpoint (months),Right endpoint (months),N,N,N,N,N,,N,N,N,N,N
+"post-COVID-19 symptoms
+of any level or severity",0,0,114,51,29,127,41,,18,10,49,627,83
+,0,1,59,67,28,106,35,,3,-,10,152,30
+,0,-,17,8,7,17,4,,-,-,1,23,2
+,1,2,20,18,31,43,15,,2,-,2,32,5
+,2,3,22,24,16,22,6,,1,1,1,20,1
+,3,6,18,25,22,42,9,,-,-,2,21,2
+,6,12,7,14,18,30,3,,-,-,2,22,-
+,6,36,3,-,1,5,-,,-,-,-,4,-
+,6,-,4,3,4,27,24,,-,-,1,9,7
+,12,18,-,25,12,1,-,,-,-,1,-,-
+,12,24,22,2,2,2,-,,-,-,-,-,-
+,12,30,5,-,-,-,-,,-,-,-,-,-
+,12,36,8,5,11,3,-,,1,-,-,-,-
+,12,-,34,32,41,6,-,,2,-,3,3,1
+,18,-,1,-,2,1,-,,-,-,-,2,-
+,24,36,2,2,-,1,-,,-,-,-,-,-
+,30,-,1,1,3,10,-,,-,-,-,3,-
+,36,48,1,2,-,-,-,,-,-,-,-,-
+,36,-,7,7,18,11,-,,-,-,1,5,-
+,48,-,34,23,-,-,-,,-,-,-,-,-
+"post-COVID-19 symptoms
+that interfere with daily life",0,0,262,202,121,302,90,,24,10,58,838,120
+,0,1,23,21,12,40,12,,1,-,3,35,6
+,0,-,9,-,5,7,-,,-,-,1,6,
+,1,2,18,9,27,21,10,,-,-,2,8,1
+,2,3,10,15,12,17,5,,1,1,1,6,1
+,3,6,6,13,6,20,4,,-,-,1,6,1
+,6,12,5,6,9,9,4,,-,-,2,5,-
+,6,36,1,2,1,5,-,,-,-,-,8,-
+,6,-,3,-,4,18,12,,-,-,1,6,2
+,12,18,-,3,4,-,-,,-,-,1,-,-
+,12,24,5,2,3,1,-,,-,-,-,-,-
+,12,30,-,-,-,-,-,,-,-,-,-,-
+,12,36,9,7,3,2,-,,-,-,-,1,-
+,12,-,14,17,25,3,-,,1,-,3,2,-
+,18,-,-,-,1,-,-,,-,-,-,2,-
+,24,36,-,-,-,1,-,,-,-,-,-,-
+,30,-,1,1,2,4,-,,-,-,-,-,-
+,36,48,-,1,-,-,-,,-,-,-,-,-
+,36,-,1,4,10,4,-,,-,-,-,-,-
+,48,-,12,6,-,-,-,,-,-,-,-,-
+,,,,,,,,,,,,,
+"The left and right endpoints represent the interval (in months since infection) during which post-COVID-19 symptoms resolved, corresponding to the lower and upper bounds in Turnbull interval-censored survival analysis. For example, a left endpoint of 6 and a right endpoint of 12 indicate recovery between 6 months and less than 12 months after infection. A missing right endpoint indicates that symptoms had not resolved by the end of follow-up.",,,,,,,,,,,,,
