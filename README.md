@@ -102,5 +102,5 @@ Sugiyama, Aya. (2025).
 Data and code for "Differences in the Long-term Course of Post-COVID-19 Symptoms across Epidemic Periods in Adults and Children:  
 A Retrospective Cohort Study in Japan, 2020–2024".  
 Zenodo. [![DOI](https://zenodo.org/badge/1069976469.svg)](https://doi.org/10.5281/zenodo.17375257)  
-**URL:** [https://github.com/USER/REPO](https://github.com/USER/REPO)
+**URL:** [https://github.com/Aya-Sugiyama/longcovid-epiperiods-japan-2020-2024/tree/main)
 (Alternatively, use the **“Cite this repository”** button on GitHub if a *CITATION.cff* file is present.)
