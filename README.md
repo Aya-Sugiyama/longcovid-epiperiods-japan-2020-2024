@@ -1,55 +1,86 @@
 # Long-term Post-COVID-19 Symptoms by Epidemic Period (Japan, 2020–2024)
 
 Reproducible materials for Turnbull interval-censored survival analyses of post-COVID-19 symptoms.  
-No individual-level data are included. Aggregated CSV files and scripts reproduce the figures and tables presented in the paper.
+No individual-level data are included. Aggregated CSV files and analysis scripts are original materials created for this study and made publicly available here.
 
 ---
 
-## Contents
+## Overview of Analytic Workflow
 
-**data/aggregated/** — Turnbull input tables (long-format CSVs) and human-readable wide tables (UTF-8)  
-**jmp_turnbull_steps_*.csv** — JMP-derived Turnbull step estimates (columns: *t_start_month, t_end_month, S, SE, period, group, severity*)  
-**figures_underlying_data/** — CSVs used to plot figures (e.g., *figure2_points.csv*, *figure3_points.csv*)  
-**r/** — R scripts for analyses (Turnbull prevalence, interval-censored regression, figure generation)  
-**jmp/** — JMP JSL scripts and Journal files for survival analyses  
-**outputs/** — Regression and summary outputs (coefficients, SE, 95% CI, p-values, fit indices)
+All figures and tables can be reproduced using the aggregated CSVs and scripts provided here.  
+Turnbull interval-censored survival curves were estimated in **JMP**, and subsequent calculations (e.g., prevalence at specific time points, regression analyses) were conducted in **R**.
 
 ---
 
-## How to Reproduce (Minimal Steps)
+## 1) Figure 2 — Estimated prevalence of post-COVID-19 symptoms over time
 
-### In JMP (version 14 or later)
+**Analysis tool:** JMP (Turnbull survival analysis)
 
-1. Open *jmp/analysis.jrn* (or run *jmp/turnbull_survival.jsl*) to generate Turnbull survival curves using  
-   *data/aggregated/S_Table1_turnbull_long.csv*.
-2. From the survival plot, select **“Make Into Data Table”** and save as  
-   *data/aggregated/jmp_turnbull_steps_long.csv*  
-   (columns: *t_start_month, t_end_month, S, SE, period, group, severity*).
-3. *(Optional)* Export plotted points for Figure 2 as *figures_underlying_data/figure2_points.csv*.
+**Steps:**
+- Input: `data/aggregated/S_Table1_turnbull_long.csv`  
+- Run: `jmp/analysis.jrn` (JMP Journal for Turnbull analysis)  
+- Output files generated from JMP:  
+  - `jmp_turnbull_steps_adult_any.csv`  
+  - `jmp_turnbull_steps_child_any.csv`  
+  - `jmp_turnbull_steps_adult_interfering.csv`  
+  - `jmp_turnbull_steps_child_interfering.csv`  
 
-### In R (version 4.4.1)
+Using these four CSV files, **Figure 2** can be fully reproduced.  
 
-Run the following scripts sequentially:
+---
 
-- **r/01_turnbull_prevalence_table.R** → Generates Supplementary Table 2 (uses *jmp_turnbull_steps_long.csv*)  
-- **r/02_icenReg_models.R** → Runs interval-censored proportional hazards models (icenReg); outputs *outputs/hr_full_results.csv*  
-- **r/03_symptom_prevalence_3m_12m.R** → Produces Figure 3 (13 symptoms; estimates at 3 and 12 months)
+## 2) Supplementary Table 2 — Estimated prevalence with 95% CIs at selected time points, by epidemic periods
 
-Results will be written to *outputs/* and *figures_underlying_data/*.
+**Analysis tools:** JMP + R
+
+**Steps:**
+- Use the four CSV files generated in Step 1:  
+  (`jmp_turnbull_steps_adult_any.csv`, `jmp_turnbull_steps_child_any.csv`,  
+  `jmp_turnbull_steps_adult_interfering.csv`, `jmp_turnbull_steps_child_interfering.csv`)
+- Run: `r/01_turnbull_prevalence_table.R`  
+- Output: `outputs/supp_table2_prevalence_CI.csv`  
+
+This R script calculates the estimated prevalence and 95% confidence intervals at predefined time points based on the Turnbull step estimates from JMP.
+
+---
+
+## 3) Table 2 — Adjusted hazard ratios for resolution of any post-COVID-19 symptoms
+
+**Analysis tool:** R (interval-censored proportional hazards models using icenReg)
+
+Individual-level data cannot be shared due to ethical restrictions, but the full analysis code and complete results are publicly available.
+
+- Code: `r/02_icenReg_models.R`  
+- Output: `outputs/hr_full_results.csv` (full regression results)
+
+---
+
+## 4) Figure 3 — Estimated prevalence of 13 post-COVID-19 symptoms at 3 and 12 months
+
+**Analysis tools:** JMP + R
+
+**Steps:**
+- Input: `data/aggregated/13symptoms_turnbull_long.csv`  
+- Run in JMP: `jmp/13symptoms_turnbull_symptom_survival.jsl`  
+  → Output: `jmp_turnbull_steps_13symptoms.csv`  
+- Then run in R: `r/03_symptom_prevalence_3m_12m.R`  
+  → Output: `figures_underlying_data/figure3_points.csv`  
+
+`figure3_points.csv` contains the data required to reproduce **Figure 3**.
 
 ---
 
 ## Environment
 
-- **R 4.4.1** (packages: *icenReg*, *readr*, *dplyr*, *ggplot2*)  
+- **R 4.4.1** (packages: *icenReg*, *readr*, *dplyr*)  
 - **JMP 14** (SAS Institute Inc.)
 
 ---
 
 ## Data Availability
 
-Aggregated minimal datasets and all analysis code are openly available at [DOI].  
-Individual-level data cannot be shared, as participants did not consent to external data release and the IRB-approved protocol prohibits it.  
+All aggregated datasets and analysis scripts are original outputs from this study and are openly available at [DOI].  
+Individual-level data cannot be shared, as participants did not consent to external release and the IRB-approved protocol prohibits it.  
 For inquiries, please contact: **Hiroshima University IRB Office** (iryo-sinsa@office.hiroshima-u.ac.jp)
 
 ---
