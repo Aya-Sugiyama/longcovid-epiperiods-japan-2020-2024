@@ -81,8 +81,10 @@ Individual-level data cannot be shared due to ethical restrictions, but the full
 
 All aggregated datasets and analysis scripts are original outputs from this study and are openly available at [DOI].  
 Individual-level data cannot be shared, as participants did not consent to external release and the IRB-approved protocol prohibits it.  
-For inquiries, please contact: **Hiroshima University IRB Office** (iryo-sinsa@office.hiroshima-u.ac.jp)
 
+**For inquiries, please contact:**  
+- **Hiroshima University IRB Office** (iryo-sinsa@office.hiroshima-u.ac.jp)  
+- **Corresponding author:** Aya Sugiyama (aya-sugiyama@hiroshima-u.ac.j)
 ---
 
 ## License
