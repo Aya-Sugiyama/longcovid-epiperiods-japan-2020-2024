@@ -79,7 +79,7 @@ Individual-level data cannot be shared due to ethical restrictions, but the full
 
 ## Data Availability
 
-All aggregated datasets and analysis scripts are original outputs from this study and are openly available at [DOI].  
+All aggregated datasets and analysis scripts are original outputs from this study and are openly available at [10.5281/zenodo.17375258].  
 Individual-level data cannot be shared, as participants did not consent to external release and the IRB-approved protocol prohibits it.  
 
 **For inquiries, please contact:**  
