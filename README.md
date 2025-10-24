@@ -84,7 +84,7 @@ Individual-level data cannot be shared, as participants did not consent to exter
 
 **For inquiries, please contact:**  
 - **Hiroshima University IRB Office** (iryo-sinsa@office.hiroshima-u.ac.jp)  
-- **Corresponding author:** Aya Sugiyama (aya-sugiyama@hiroshima-u.ac.j)
+- **Corresponding author:** Aya Sugiyama (aya-sugiyama@hiroshima-u.ac.jp)
 ---
 
 ## License
